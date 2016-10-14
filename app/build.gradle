@@ -2,7 +2,7 @@ apply plugin: 'com.android.application'
 
 android {
     compileSdkVersion 24
-    buildToolsVersion "24.0.3"
+    buildToolsVersion '24.0.3'
     defaultConfig {
         applicationId "com.example.zhaotong.db410c_system"
         minSdkVersion 22
@@ -20,8 +20,8 @@ android {
 }
 
 dependencies {
-    compile fileTree(dir: 'libs', include: ['*.jar'])
-    compile project (':db410c_gpiolib')
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    compile project(':db410c_gpiolib')
     androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
         exclude group: 'com.android.support', module: 'support-annotations'
     })
