@@ -8,6 +8,7 @@ import android.view.MenuItem;
 
 import net.calit2.mooc.iot_db410c.db410c_gpiolib.GpioProcessor;
 
+
 public class MainActivity extends Activity {
 
     @Override
@@ -41,9 +42,8 @@ public class MainActivity extends Activity {
             }
         }).start();
 
-
-
     }
+
 
 
 }
