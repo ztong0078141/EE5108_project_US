@@ -13,5 +13,14 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Ultrasould Detection!" />
+        android:text="Ultrasould Detection!"
+        android:id="@+id/TextView" />
+
+    <ToggleButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/UltrasonicButton"
+        android:layout_marginTop="33dp"
+        android:layout_below="@+id/TextView"
+        android:layout_alignParentStart="true" />
 </RelativeLayout>
