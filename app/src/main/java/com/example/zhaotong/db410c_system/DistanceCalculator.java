@@ -28,14 +28,15 @@ public class DistanceCalculator implements UltraSonicInterface {
         this.activity = activity;
         activity.setContentView(R.layout.activity_main);
 
-        textView = (TextView) activity.findViewById(R.id.TextView);
-        ((ToggleButton) activity.findViewById(R.id.UltrasonicButton)).setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+        textView = (TextView) activity.findViewById(R.id.textView);
+        ((ToggleButton) activity.findViewById(R.id.ultrasonicButton)).setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
                 setUltrasonicOn(isChecked);
             }
         });
     }
+
 
     @Override
     public boolean getRunningState() {
@@ -76,13 +77,13 @@ public class DistanceCalculator implements UltraSonicInterface {
            }
     }
     private void updateDistance(final double distance) {
-        // Log.i(TAG, "Updating TextView");
+        //Log.i(TAG, "Updating TextView");
         activity.runOnUiThread(new Runnable() {
             @Override
             public void run() {
                 textView.setText("You are " + String.format("%.2f", distance) + "cm away from the nearest object");
                 //textView.setTextColor(color);
-
+                Log.i(TAG, String.format("%.2f", distance));
             }
         });
 
@@ -91,7 +92,7 @@ public class DistanceCalculator implements UltraSonicInterface {
 
     private void turnOffTextView(){
 
-        //  Log.i(TAG, "Updating TextView");
+        Log.i(TAG, "Updating TextView - Off");
         activity.runOnUiThread(new Runnable() {
             @Override
             public void run() {
